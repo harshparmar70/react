@@ -8,13 +8,12 @@ const App = () => {
 
   const submitehendler = (e) =>{
     e.preventDefault()
+    if (!title.trim() || !details.trim()) return
 
     const copytask = [...task];
-    
     copytask.push({title,details})
     settask(copytask)
-
-    console.log(task);
+    
     
     
     settitle('')
